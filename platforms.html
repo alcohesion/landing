@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,16 @@
     <link rel="icon" type="image/svg+xml" href="img/logo.svg">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/drawer.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/platforms.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -213,12 +217,63 @@
         </div>
     </nav>
 
+    <!-- Mobile Drawer Navigation (660px and below) -->
+    <nav class="drawer-nav">
+        <div class="drawer-menu">
+            <div class="drawer-header">
+                <div class="drawer-logo">
+                    <img src="/img/logo.svg" alt="Thealcohesion Logo" class="logo">
+                    <h3>Thealcohesion</h3>
+                </div>
+                <button class="drawer-close" aria-label="Close menu">&times;</button>
+            </div>
+
+            <h4>Quick Links</h4>
+            <div class="link-group">
+                <a href="/index.html" class="home"><i data-lucide="home"></i> Home</a>
+                <a href="/about.html" class="about"><i data-lucide="info"></i> About</a>
+                <a href="/platforms.html" class="platforms"><i data-lucide="layers"></i> Platforms</a>
+                <a href="/formations.html" class="formations"><i data-lucide="activity"></i> Formations</a>
+                <a href="/careers.html" class="careers"><i data-lucide="briefcase"></i> Careers</a>
+                <a href="/soon.html" class="launch"><i data-lucide="rocket"></i> Launch</a>
+            </div>
+
+            <h4>Support</h4>
+            <div class="link-group">
+                <a href="#" onclick="alert('Docs coming soon!')" class="docs"><i data-lucide="book-open"></i> Docs</a>
+                <a href="#" onclick="alert('API coming soon!')" class="api"><i data-lucide="code"></i> API</a>
+                <a href="/contact.html" class="help"><i data-lucide="help-circle"></i> Help</a>
+                <a href="#" onclick="alert('Terms coming soon!')" class="terms"><i data-lucide="file-text"></i>
+                    Terms</a>
+            </div>
+
+            <h4>Contact</h4>
+            <div class="link-group">
+                <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me."
+                    target="_blank" class="whatsapp"><i data-lucide="message-circle"></i> WhatsApp</a>
+                <a href="tel:+254703538027" class="call"><i data-lucide="phone"></i> Call</a>
+            </div>
+
+            <div class="drawer-bottom">
+                <p>&copy; <span class="copyright-year">2024</span> Thealcohesion VPU</p>
+                <div class="drawer-legal">
+                    <a href="#" onclick="alert('Privacy coming soon!')">Privacy</a>
+                    <a href="#" onclick="alert('Terms coming soon!')">Terms</a>
+                    <a href="#" onclick="alert('Cookies coming soon!')">Cookies</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="drawer-overlay"></div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="page-hero">
         <div class="container">
             <div class="page-hero-content" data-aos="fade-up">
                 <h1>Thealcohesion Platforms</h1>
-                <p class="hero-subtitle">Thealcohesion has a multidimensional ecosystem of specialized digital platforms built on Thealcohesion VPU System</p>
+                <p class="hero-subtitle">Thealcohesion has a multidimensional ecosystem of specialized digital platforms
+                    built on Thealcohesion VPU System</p>
                 <div class="hero-badge" data-aos="zoom-in" data-aos-delay="300">
                     <span>Ending THE RAT RACE</span>
                 </div>
@@ -231,7 +286,8 @@
         <div class="container">
             <div class="overview-content" data-aos="fade-up">
                 <h2>Empowering Thealcohesion Natives</h2>
-                <p>The platforms collectively power the usage across economic, social, professional, and innovative spheres.</p>
+                <p>The platforms collectively power the usage across economic, social, professional, and innovative
+                    spheres.</p>
             </div>
         </div>
     </section>
@@ -245,7 +301,11 @@
                     <h3>Thealcohesion Transport</h3>
                 </div>
                 <div class="platform-content">
-                    <p>This platform serves as the official transport management system of Thealcohesion. It is designed to provide structured, reliable, and well-coordinated transportation services for members, including vehicle scheduling, route optimization, ride-sharing coordination, and logistics planning. The platform ensures that all travel-related affairs within Thealcohesion are streamlined, reducing inefficiencies and promoting mobility across various regions.</p>
+                    <p>This platform serves as the official transport management system of Thealcohesion. It is designed
+                        to provide structured, reliable, and well-coordinated transportation services for members,
+                        including vehicle scheduling, route optimization, ride-sharing coordination, and logistics
+                        planning. The platform ensures that all travel-related affairs within Thealcohesion are
+                        streamlined, reducing inefficiencies and promoting mobility across various regions.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Vehicle Scheduling</span>
@@ -261,7 +321,11 @@
                     <h3>Thealcohesion Invest</h3>
                 </div>
                 <div class="platform-content">
-                    <p>Thealcohesion Invest functions as a collaborative investment and capital formation hub. It allows members to issue and purchase shares, enabling the pooling of resources for projects, startups, and business expansions. This platform democratizes access to capital and promotes economic inclusivity by allowing even small contributors to participate in profitable ventures, while ensuring transparent reporting and return on investment tracking.</p>
+                    <p>Thealcohesion Invest functions as a collaborative investment and capital formation hub. It allows
+                        members to issue and purchase shares, enabling the pooling of resources for projects, startups,
+                        and business expansions. This platform democratizes access to capital and promotes economic
+                        inclusivity by allowing even small contributors to participate in profitable ventures, while
+                        ensuring transparent reporting and return on investment tracking.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Share Trading</span>
@@ -277,7 +341,11 @@
                     <h3>Thealcohesion Mart</h3>
                 </div>
                 <div class="platform-content">
-                    <p>Thealcohesion Mart is a vibrant and secure digital marketplace where members can trade goods and services in a trusted environment. It offers tools for listing, purchasing, and reviewing items, and includes features such as escrow payment systems, delivery tracking, and vendor ratings. The platform encourages intra-community commerce, supports local enterprise, and strengthens the economic bond among members.</p>
+                    <p>Thealcohesion Mart is a vibrant and secure digital marketplace where members can trade goods and
+                        services in a trusted environment. It offers tools for listing, purchasing, and reviewing items,
+                        and includes features such as escrow payment systems, delivery tracking, and vendor ratings. The
+                        platform encourages intra-community commerce, supports local enterprise, and strengthens the
+                        economic bond among members.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Digital Marketplace</span>
@@ -293,7 +361,11 @@
                     <h3>Thealcohesion Impact</h3>
                 </div>
                 <div class="platform-content">
-                    <p>This platform acts as the philanthropic and social support wing of Thealcohesion. Members can initiate or contribute to funding campaigns aimed at solving real-world problems, supporting community causes, or backing innovation. Whether it's funding a fellow member's education, a health emergency, or a grassroots project, Thealcohesion Impact fosters solidarity and collective responsibility.</p>
+                    <p>This platform acts as the philanthropic and social support wing of Thealcohesion. Members can
+                        initiate or contribute to funding campaigns aimed at solving real-world problems, supporting
+                        community causes, or backing innovation. Whether it's funding a fellow member's education, a
+                        health emergency, or a grassroots project, Thealcohesion Impact fosters solidarity and
+                        collective responsibility.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Funding Campaigns</span>
@@ -309,7 +381,11 @@
                     <h3>Thealcohesion Native Financial Institution (TNFI)</h3>
                 </div>
                 <div class="platform-content">
-                    <p>The TNFI is the financial heartbeat of Thealcohesion, functioning as a banking institution. It offers traditional and digital banking services such as savings accounts, mobile money, fund transfers, bill payments, and interest-earning deposit schemes. With an emphasis on real-time services and member-centric banking, the TNFI ensures financial inclusion, accountability, and liquidity across all Thealcohesion platforms.</p>
+                    <p>The TNFI is the financial heartbeat of Thealcohesion, functioning as a banking institution. It
+                        offers traditional and digital banking services such as savings accounts, mobile money, fund
+                        transfers, bill payments, and interest-earning deposit schemes. With an emphasis on real-time
+                        services and member-centric banking, the TNFI ensures financial inclusion, accountability, and
+                        liquidity across all Thealcohesion platforms.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Digital Banking</span>
@@ -325,7 +401,11 @@
                     <h3>Thealcohesion Anti Money Laundering (AML)</h3>
                 </div>
                 <div class="platform-content">
-                    <p>This platform is tasked with maintaining ethical financial standards by detecting, monitoring, and investigating suspected money laundering activities. It provides advanced analytics, reporting tools, and verification systems to ensure compliance with internal and national regulations. The AML unit is a cornerstone of financial integrity and trust within Thealcohesion.</p>
+                    <p>This platform is tasked with maintaining ethical financial standards by detecting, monitoring,
+                        and investigating suspected money laundering activities. It provides advanced analytics,
+                        reporting tools, and verification systems to ensure compliance with internal and national
+                        regulations. The AML unit is a cornerstone of financial integrity and trust within
+                        Thealcohesion.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Financial Monitoring</span>
@@ -341,7 +421,11 @@
                     <h3>Thealcohesion Anti-Fraud</h3>
                 </div>
                 <div class="platform-content">
-                    <p>Functioning alongside the AML platform, Thealcohesion Anti-Fraud is dedicated to safeguarding financial and data systems against fraudulent activities. This platform uses risk assessment models, user authentication tools, and case management systems to investigate and address issues such as identity theft, phishing, and financial misrepresentation. It reinforces the ethical standards and reliability of all transactions within Thealcohesion.</p>
+                    <p>Functioning alongside the AML platform, Thealcohesion Anti-Fraud is dedicated to safeguarding
+                        financial and data systems against fraudulent activities. This platform uses risk assessment
+                        models, user authentication tools, and case management systems to investigate and address issues
+                        such as identity theft, phishing, and financial misrepresentation. It reinforces the ethical
+                        standards and reliability of all transactions within Thealcohesion.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Fraud Prevention</span>
@@ -357,7 +441,11 @@
                     <h3>Thealcohesion Boost</h3>
                 </div>
                 <div class="platform-content">
-                    <p>This lending platform supports members by providing accessible and low-interest loans for personal or business use. It includes automated eligibility assessment, flexible repayment terms, and educational resources on financial management. Thealcohesion Boost aims to eradicate financial barriers and promote entrepreneurship, self-reliance, and growth among its members.</p>
+                    <p>This lending platform supports members by providing accessible and low-interest loans for
+                        personal or business use. It includes automated eligibility assessment, flexible repayment
+                        terms, and educational resources on financial management. Thealcohesion Boost aims to eradicate
+                        financial barriers and promote entrepreneurship, self-reliance, and growth among its members.
+                    </p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Low-Interest Loans</span>
@@ -373,7 +461,11 @@
                     <h3>Thealcohesion Roam</h3>
                 </div>
                 <div class="platform-content">
-                    <p>Thealcohesion Roam is the tourism and travel coordination platform designed to enable cultural exchange, exploration, and discovery among members. It offers tour planning services, booking options, group excursions, and travel discounts. By fostering regional and international mobility, Thealcohesion Roam strengthens member interaction and promotes appreciation for diverse environments and traditions.</p>
+                    <p>Thealcohesion Roam is the tourism and travel coordination platform designed to enable cultural
+                        exchange, exploration, and discovery among members. It offers tour planning services, booking
+                        options, group excursions, and travel discounts. By fostering regional and international
+                        mobility, Thealcohesion Roam strengthens member interaction and promotes appreciation for
+                        diverse environments and traditions.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Tour Planning</span>
@@ -389,7 +481,11 @@
                     <h3>Thealcohesion Next</h3>
                 </div>
                 <div class="platform-content">
-                    <p>This career development and job connection platform empowers members with tools for building their professional journeys. It includes resume builders, job listings, mentorship matching, interview preparation, and skills certification programs. Thealcohesion Next addresses employment gaps, connects talent to opportunities, and helps members reach their career aspirations.</p>
+                    <p>This career development and job connection platform empowers members with tools for building
+                        their professional journeys. It includes resume builders, job listings, mentorship matching,
+                        interview preparation, and skills certification programs. Thealcohesion Next addresses
+                        employment gaps, connects talent to opportunities, and helps members reach their career
+                        aspirations.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Career Development</span>
@@ -405,7 +501,10 @@
                     <h3>Thealcohesion Rise</h3>
                 </div>
                 <div class="platform-content">
-                    <p>Dedicated to talent identification and personal development, this platform helps members uncover and cultivate their abilities in fields such as arts, science, athletics, and leadership. With talent showcases, competitions, mentorship, and grant opportunities, Thealcohesion Rise ensures that no potential goes unnoticed or unsupported.</p>
+                    <p>Dedicated to talent identification and personal development, this platform helps members uncover
+                        and cultivate their abilities in fields such as arts, science, athletics, and leadership. With
+                        talent showcases, competitions, mentorship, and grant opportunities, Thealcohesion Rise ensures
+                        that no potential goes unnoticed or unsupported.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Talent Identification</span>
@@ -421,7 +520,10 @@
                     <h3>Thealcohesion Reels</h3>
                 </div>
                 <div class="platform-content">
-                    <p>This digital media platform enables members to create and share short, informative videos. It supports community storytelling, educational content dissemination, and digital expression. Thealcohesion Reels acts as a cultural and knowledge-sharing platform that uplifts voices and promotes digital literacy.</p>
+                    <p>This digital media platform enables members to create and share short, informative videos. It
+                        supports community storytelling, educational content dissemination, and digital expression.
+                        Thealcohesion Reels acts as a cultural and knowledge-sharing platform that uplifts voices and
+                        promotes digital literacy.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Video Creation</span>
@@ -437,7 +539,10 @@
                     <h3>Thealcohesion Elevate</h3>
                 </div>
                 <div class="platform-content">
-                    <p>A hub for innovation and invention, this platform facilitates the sharing, discussion, and support of creative ideas and technical solutions. Members can pitch concepts, receive feedback, find collaborators, and attract sponsorship or incubation. Thealcohesion Elevate champions innovation as a key driver of progress and community transformation.</p>
+                    <p>A hub for innovation and invention, this platform facilitates the sharing, discussion, and
+                        support of creative ideas and technical solutions. Members can pitch concepts, receive feedback,
+                        find collaborators, and attract sponsorship or incubation. Thealcohesion Elevate champions
+                        innovation as a key driver of progress and community transformation.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Innovation Hub</span>
@@ -453,7 +558,10 @@
                     <h3>PHILOMSCI Education</h3>
                 </div>
                 <div class="platform-content">
-                    <p>Serving as the academic wing of Thealcohesion, PHILOMSCI Education ensures that members have uninterrupted access to quality learning. It offers e-learning modules, course materials, exam preparation tools, tutoring networks, and educational counseling. The platform supports lifelong learning, academic achievement, and the intellectual empowerment of Thealcohesion natives.</p>
+                    <p>Serving as the academic wing of Thealcohesion, PHILOMSCI Education ensures that members have
+                        uninterrupted access to quality learning. It offers e-learning modules, course materials, exam
+                        preparation tools, tutoring networks, and educational counseling. The platform supports lifelong
+                        learning, academic achievement, and the intellectual empowerment of Thealcohesion natives.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">E-Learning</span>
@@ -469,7 +577,10 @@
                     <h3>Thealcohesion Ascent</h3>
                 </div>
                 <div class="platform-content">
-                    <p>Focused on entrepreneurship and business education, this platform provides training resources, workshops, webinars, and business plan templates. It enables aspiring entrepreneurs to turn ideas into viable ventures by equipping them with the knowledge and skills necessary for success in competitive markets.</p>
+                    <p>Focused on entrepreneurship and business education, this platform provides training resources,
+                        workshops, webinars, and business plan templates. It enables aspiring entrepreneurs to turn
+                        ideas into viable ventures by equipping them with the knowledge and skills necessary for success
+                        in competitive markets.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Entrepreneurship</span>
@@ -485,7 +596,10 @@
                     <h3>Thealcohesion Thrive</h3>
                 </div>
                 <div class="platform-content">
-                    <p>Thealcohesion Thrive is a real-time health and wellness platform that links members with medical professionals, healthcare facilities, and wellness content. It offers digital consultations, appointment scheduling, health records access, and personalized wellness tips, thus fostering a proactive and informed approach to health.</p>
+                    <p>Thealcohesion Thrive is a real-time health and wellness platform that links members with medical
+                        professionals, healthcare facilities, and wellness content. It offers digital consultations,
+                        appointment scheduling, health records access, and personalized wellness tips, thus fostering a
+                        proactive and informed approach to health.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Digital Consultations</span>
@@ -501,7 +615,10 @@
                     <h3>Thealcohesion Cosmopolitan</h3>
                 </div>
                 <div class="platform-content">
-                    <p>This is the social engagement platform of Thealcohesion, designed to foster open dialogue, cultural exchange, and the sharing of thoughts and opinions. It supports blogs, forums, multimedia content, and real-time conversations, giving members a voice in the community and encouraging intellectual and social interaction.</p>
+                    <p>This is the social engagement platform of Thealcohesion, designed to foster open dialogue,
+                        cultural exchange, and the sharing of thoughts and opinions. It supports blogs, forums,
+                        multimedia content, and real-time conversations, giving members a voice in the community and
+                        encouraging intellectual and social interaction.</p>
                 </div>
                 <div class="platform-features">
                     <span class="feature-tag">Social Engagement</span>
@@ -513,7 +630,7 @@
         </div>
     </section>
 
-   <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -684,15 +801,21 @@
                         <h3>Thealcohesion</h3>
                     </div>
                     <p>I AM because YOU ARE</p>
-                    <p>Thealcohesion is a vessal for conveying complete development to foster people cohesion and integration to unlock better collaboration and synergy to create lives worthy living hence <a href="careers.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Escape the Rat Race</a><br>We are social-reach us for more information:</p>
+                    <p>Thealcohesion is a vessal for conveying complete development to foster people cohesion and
+                        integration to unlock better collaboration and synergy to create lives worthy living hence <a
+                            href="careers.html"
+                            style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Escape the Rat
+                            Race</a><br>We are social-reach us for more information:</p>
                     <div class="social-links">
-                        <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me." class="social-link" aria-label="WhatsApp">
+                        <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me."
+                            class="social-link" aria-label="WhatsApp">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                                 <path
                                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488" />
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/alkebulancohesion" class="social-link" aria-label="Instagram">
+                        <a href="https://www.instagram.com/alkebulancohesion" class="social-link"
+                            aria-label="Instagram">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
@@ -712,7 +835,8 @@
                                 <circle cx="4" cy="4" r="2" />
                             </svg>
                         </a>
-                        <a href="https://www.facebook.com/groups/396586176465326" class="social-link" aria-label="Facebook">
+                        <a href="https://www.facebook.com/groups/396586176465326" class="social-link"
+                            aria-label="Facebook">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                             </svg>
@@ -748,7 +872,8 @@
                 <div class="footer-section">
                     <h4>For Instant Connection</h4>
                     <div class="footer-contact-links">
-                        <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me." target="_blank" class="footer-contact-link whatsapp-big">
+                        <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me."
+                            target="_blank" class="footer-contact-link whatsapp-big">
                             <span>WhatsApp</span>
                         </a>
                         <a href="tel:+254703538027" class="footer-contact-link phone-link whatsapp-big">
@@ -772,5 +897,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/platforms.js"></script>
+    <script src="js/drawer.js"></script>
 </body>
+
 </html>

@@ -13,6 +13,7 @@
   border-bottom: var(--border);
   z-index: 1000;
   transition: all 0.3s ease;
+  min-height: 70px;
 }
 
 .nav-container {
@@ -23,6 +24,7 @@
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  min-height: 70px;
 }
 
 /* Logo Styles */
@@ -133,6 +135,7 @@
   }
 }
 
+/* Desktop and Tablet Navigation (988px and below) */
 @media (max-width: 988px) {
   .hamburger {
     display: flex;
@@ -152,36 +155,65 @@
     transform: rotate(45deg) translate(-6px, -6px);
   }
 
+  /* Hide the desktop navigation menu - drawer will handle it */
   .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    flex-direction: column;
-    background: var(--background);
-    width: 100%;
-    height: calc(100vh - 70px); /* Fallback for older browsers */
-    height: calc(100dvh - 70px); /* Dynamic viewport height for mobile */
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: var(--header-shadow);
-    padding: 2rem 0;
-    backdrop-filter: blur(3px);
-    z-index: 1000;
-    overflow-y: auto;
+    display: none !important;
+  }
+}
+
+/* Mobile Navigation (660px and below) - Use Drawer Menu */
+@media (max-width: 660px) {
+  .nav-container {
+    padding: 0 15px;
   }
 
-  .nav-menu.active {
-    left: 0;
+  .nav-logo h3 {
+    font-size: 1.2rem;
   }
 
-  .nav-menu li {
-    margin: 0;
+  /* Show hamburger menu on mobile to control drawer */
+  .hamburger {
+    display: flex !important;
+    z-index: 1002;
+    padding: 12px;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
   }
 
-  .nav-link {
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
-    display: block;
+  .hamburger:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+
+  .hamburger:active {
+    transform: scale(0.95);
+  }
+
+  .hamburger .bar {
+    width: 22px;
+    height: 2.5px;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+  }
+
+  /* Hide desktop navigation menu on mobile completely */
+  .nav-menu {
+    display: none !important;
   }
 }
 
@@ -191,18 +223,7 @@
   }
 
   .nav-logo h3 {
-    font-size: 1.3rem;
-  }
-
-  .hamburger {
-    padding: 12px 8px; /* Larger touch target for mobile */
-    min-width: 44px; /* Apple iOS recommended minimum touch target */
-    min-height: 44px;
-  }
-
-  .hamburger .bar {
-    width: 22px;
-    height: 2.5px;
+    font-size: 1.1rem;
   }
 }
 

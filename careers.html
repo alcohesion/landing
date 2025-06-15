@@ -8,9 +8,11 @@
     <link rel="icon" type="image/svg+xml" href="img/logo.svg">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/drawer.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/careers.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -21,7 +23,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <div class="logo-svg">
-                   <svg version="1.1" id="svg1" width="30" height="30" viewBox="0 0 2059.7466 2218.3867"
+                    <svg version="1.1" id="svg1" width="30" height="30" viewBox="0 0 2059.7466 2218.3867"
                         sodipodi:docname="vector.ai" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
                         xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
                         xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
@@ -214,6 +216,58 @@
         </div>
     </nav>
 
+    <!-- Mobile Drawer Navigation (660px and below) -->
+    <nav class="drawer-nav">
+        <div class="drawer-menu">
+            <div class="drawer-header">
+                <div class="drawer-logo">
+                    <img src="/img/logo.svg" alt="Thealcohesion Logo" class="logo">
+                    <h3>Thealcohesion</h3>
+                </div>
+                <button class="drawer-close" aria-label="Close menu">&times;</button>
+            </div>
+        </div>
+
+        <h4>Quick Links</h4>
+        <div class="link-group">
+            <a href="/index.html" class="home"><i data-lucide="home"></i> Home</a>
+            <a href="/about.html" class="about"><i data-lucide="info"></i> About</a>
+            <a href="/platforms.html" class="platforms"><i data-lucide="layers"></i> Platforms</a>
+            <a href="/formations.html" class="formations"><i data-lucide="activity"></i> Formations</a>
+            <a href="/careers.html" class="careers"><i data-lucide="briefcase"></i> Careers</a>
+            <a href="/soon.html" class="launch"><i data-lucide="rocket"></i> Launch</a>
+        </div>
+
+        <h4>Support</h4>
+        <div class="link-group">
+            <a href="#" onclick="alert('Docs coming soon!')" class="docs"><i data-lucide="book-open"></i> Docs</a>
+            <a href="#" onclick="alert('API coming soon!')" class="api"><i data-lucide="code"></i> API</a>
+            <a href="/contact.html" class="help"><i data-lucide="help-circle"></i> Help</a>
+            <a href="#" onclick="alert('Terms coming soon!')" class="terms"><i data-lucide="file-text"></i>
+                Terms</a>
+        </div>
+
+        <h4>Contact</h4>
+        <div class="link-group">
+            <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me."
+                target="_blank" class="whatsapp"><i data-lucide="message-circle"></i>
+                WhatsApp</a>
+            <a href="tel:+254703538027" class="call"><i data-lucide="phone"></i> Call</a>
+        </div>
+
+        <div class="drawer-bottom">
+            <p>&copy; <span class="copyright-year">2024</span> Thealcohesion VPU</p>
+            <div class="drawer-legal">
+                <a href="#" onclick="alert('Privacy coming soon!')">Privacy</a>
+                <a href="#" onclick="alert('Terms coming soon!')">Terms</a>
+                <a href="#" onclick="alert('Cookies coming soon!')">Cookies</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="drawer-overlay"></div>
+    </nav>
+
     <!-- Careers Hero Section -->
     <section class="careers-hero">
         <!-- Hero Particles Background -->
@@ -227,14 +281,15 @@
                 <div class="shape shape-6"></div>
             </div>
         </div>
-        
+
         <div class="careers-hero-content" data-aos="fade-up" data-aos-duration="1000">
             <div class="hero-text">
                 <h1 class="careers-title">
                     <span class="title-line">Join Thealcohesion</span>
                     <span class="title-line highlight">Be Part of Building a Legacy</span>
                 </h1>
-                <p class="careers-subtitle">Transform your passion into purpose. Join our founding team and help build a revolutionary ecosystem that shapes the future of innovation and social impact.</p>
+                <p class="careers-subtitle">Transform your passion into purpose. Join our founding team and help build a
+                    revolutionary ecosystem that shapes the future of innovation and social impact.</p>
                 <div class="hero-stats">
                     <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
                         <div class="stat-number">01</div>
@@ -267,18 +322,22 @@
             </div>
 
             <div class="job-content">
-                <div class="job-section job-responsibilities" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="job-section job-responsibilities" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="100">
                     <h3>Responsibilities</h3>
                     <ul>
-                        <li>Collaborate with the founding members to build Thealcohesion's structure, systems, and strategy.</li>
-                        <li>Contribute to the development of key projects in innovation, tourism, and socio-economic empowerment.</li>
+                        <li>Collaborate with the founding members to build Thealcohesion's structure, systems, and
+                            strategy.</li>
+                        <li>Contribute to the development of key projects in innovation, tourism, and socio-economic
+                            empowerment.</li>
                         <li>Engage in research, planning, outreach, and community building.</li>
                         <li>Help establish partnerships, manage communications, and shape organizational culture.</li>
                         <li>Take initiative in your field of expertise and co-create with a multidisciplinary team.</li>
                     </ul>
                 </div>
 
-                <div class="job-section job-requirements" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="job-section job-requirements" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="200">
                     <h3>Requirements and Skills</h3>
                     <ul>
                         <li>Strong passion for innovation, nation-building, and social impact.</li>
@@ -291,14 +350,16 @@
                 <div class="job-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <h3>Minimum Experience</h3>
                     <ul>
-                        <li>No formal experience required, but prior involvement in community projects, startups, leadership roles, or innovation spaces is a plus.</li>
+                        <li>No formal experience required, but prior involvement in community projects, startups,
+                            leadership roles, or innovation spaces is a plus.</li>
                     </ul>
                 </div>
 
                 <div class="job-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <h3>Minimum Qualification Requirements</h3>
                     <ul>
-                        <li>Certificate, Diploma or Bachelor's degree in any relevant field (Business, ICT, Social Sciences, Engineering, Arts, etc.).</li>
+                        <li>Certificate, Diploma or Bachelor's degree in any relevant field (Business, ICT, Social
+                            Sciences, Engineering, Arts, etc.).</li>
                         <li>Final year students or recent graduates with demonstrable passion are welcome.</li>
                         <li>People with demonstrable talents are welcomed irrespective of education level.</li>
                     </ul>
@@ -306,8 +367,14 @@
 
                 <div class="job-description" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <h3>Description</h3>
-                    <p>Thealcohesion is not just an organization — it's a movement. We're building a revolutionary ecosystem to foster innovation, unity, and sustainable development across sectors. As part of our initial team, you won't just have a role — you'll help define them. You'll gain invaluable experience, contribute to a legacy project, and grow alongside a team determined to make a difference.</p>
-                    <p>This is a call to dreamers, doers, and builders. If you believe in co-creating change, are ready to commit your talent and time, and are excited to shape the future, <strong>we want to hear from you.</strong></p>
+                    <p>Thealcohesion is not just an organization — it's a movement. We're building a revolutionary
+                        ecosystem to foster innovation, unity, and sustainable development across sectors. As part of
+                        our initial team, you won't just have a role — you'll help define them. You'll gain invaluable
+                        experience, contribute to a legacy project, and grow alongside a team determined to make a
+                        difference.</p>
+                    <p>This is a call to dreamers, doers, and builders. If you believe in co-creating change, are ready
+                        to commit your talent and time, and are excited to shape the future, <strong>we want to hear
+                            from you.</strong></p>
                 </div>
             </div>
         </div>
@@ -319,7 +386,8 @@
             <div class="form-container" data-aos="fade-up" data-aos-duration="800">
                 <div class="form-header">
                     <h2 class="form-title">Apply Now and Be a Founder of the Future</h2>
-                    <p class="form-subtitle">Ready to join our founding team? Fill out the form below and we'll connect with you instantly on WhatsApp!</p>
+                    <p class="form-subtitle">Ready to join our founding team? Fill out the form below and we'll connect
+                        with you instantly on WhatsApp!</p>
                 </div>
 
                 <form id="applicationForm" class="application-form">
@@ -358,7 +426,8 @@
 
                     <div class="form-group" id="otherQualificationGroup" style="display: none;">
                         <label for="otherQualification">Please specify your qualification *</label>
-                        <input type="text" id="otherQualification" name="otherQualification" placeholder="Enter your qualification">
+                        <input type="text" id="otherQualification" name="otherQualification"
+                            placeholder="Enter your qualification">
                         <span class="error-message" id="otherQualificationError"></span>
                     </div>
 
@@ -384,20 +453,23 @@
 
                     <div class="form-group" id="otherFieldGroup" style="display: none;">
                         <label for="otherField">Please specify your field *</label>
-                        <input type="text" id="otherField" name="otherField" placeholder="Enter your field of expertise">
+                        <input type="text" id="otherField" name="otherField"
+                            placeholder="Enter your field of expertise">
                         <span class="error-message" id="otherFieldError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="motivation">Why do you want to join Thealcohesion? *</label>
-                        <textarea id="motivation" name="motivation" rows="4" placeholder="Share your motivation and vision..." required></textarea>
+                        <textarea id="motivation" name="motivation" rows="4"
+                            placeholder="Share your motivation and vision..." required></textarea>
                         <span class="error-message" id="motivationError"></span>
                     </div>
 
                     <div class="form-actions">
                         <button type="submit" class="submit-btn">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488" />
                             </svg>
                             Start WhatsApp Chat
                         </button>
@@ -578,15 +650,21 @@
                         <h3>Thealcohesion</h3>
                     </div>
                     <p>I AM because YOU ARE</p>
-                    <p>Thealcohesion is a vessal for conveying complete development to foster people cohesion and integration to unlock better collaboration and synergy to create lives worthy living hence <a href="careers.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Escape the Rat Race</a><br>We are social-reach us for more information:</p>
+                    <p>Thealcohesion is a vessal for conveying complete development to foster people cohesion and
+                        integration to unlock better collaboration and synergy to create lives worthy living hence <a
+                            href="careers.html"
+                            style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Escape the Rat
+                            Race</a><br>We are social-reach us for more information:</p>
                     <div class="social-links">
-                        <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me." class="social-link" aria-label="WhatsApp">
+                        <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me."
+                            class="social-link" aria-label="WhatsApp">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                                 <path
                                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488" />
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/alkebulancohesion" class="social-link" aria-label="Instagram">
+                        <a href="https://www.instagram.com/alkebulancohesion" class="social-link"
+                            aria-label="Instagram">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
@@ -606,7 +684,8 @@
                                 <circle cx="4" cy="4" r="2" />
                             </svg>
                         </a>
-                        <a href="https://www.facebook.com/groups/396586176465326" class="social-link" aria-label="Facebook">
+                        <a href="https://www.facebook.com/groups/396586176465326" class="social-link"
+                            aria-label="Facebook">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                             </svg>
@@ -641,7 +720,8 @@
                 <div class="footer-section">
                     <h4>For Instant Connection</h4>
                     <div class="footer-contact-links">
-                        <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me." target="_blank" class="footer-contact-link whatsapp-big">
+                        <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me."
+                            target="_blank" class="footer-contact-link whatsapp-big">
                             <span>WhatsApp</span>
                         </a>
                         <a href="tel:+254703538027" class="footer-contact-link phone-link whatsapp-big">
@@ -672,6 +752,7 @@
             once: true
         });
     </script>
+    <script src="js/drawer.js"></script>
 </body>
 
 </html>
