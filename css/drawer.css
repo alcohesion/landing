@@ -6,33 +6,74 @@
   --drawer-width: 90%;
 }
 
+/* Hide drawer navigation completely on desktop */
+@media (min-width: 989px) {
+  nav.drawer-nav {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  nav.drawer-nav *,
+  nav.drawer-nav > *,
+  nav.drawer-nav > div.drawer-menu,
+  nav.drawer-nav > div.drawer-menu > * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
+
 /* Only show drawer menu on screens 988px and below */
 @media (max-width: 988px) {
+  /* Drawer Navigation Container - show on mobile */
+  nav.drawer-nav {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    z-index: 10001;
+    pointer-events: none;
+  }
+
   /* Hide the drawer toggle button - we'll use the hamburger menu instead */
-  .drawer-toggle {
+  nav.drawer-nav .drawer-toggle {
     display: none !important;
   }
 
   /* Show hamburger menu on mobile */
-  .hamburger {
+  nav.navbar > div.nav-container > div.hamburger,
+  nav.navbar > div.nav-container > div.hamburger {
     display: flex !important;
     z-index: 1002;
   }
 
   /* Hide desktop navigation menu */
-  .nav-menu {
+  nav.navbar > div.nav-container > ul.nav-menu,
+  nav.navbar > div.nav-container > ul.nav-menu {
     display: none !important;
   }
 
   /* Prevent text selection on drawer elements */
-  .drawer-menu {
+  nav.drawer-nav > div.drawer-menu {
     user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
   }
 
   /* Drawer Menu Container */
-  .drawer-menu {
+  nav.drawer-nav > div.drawer-menu {
     position: fixed;
     top: 0;
     right: calc(-1 * var(--drawer-width));
@@ -56,9 +97,10 @@
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: -8px 0 32px rgba(0, 0, 0, 0.3);
     will-change: transform, opacity, visibility;
+    pointer-events: auto;
   }
 
-  .drawer-menu.open {
+  nav.drawer-nav > div.drawer-menu.open {
     right: 0;
     opacity: 1;
     visibility: visible;
@@ -66,7 +108,7 @@
   }
 
   /* Drawer Header */
-  .drawer-header {
+  nav.drawer-nav > div.drawer-menu > div.drawer-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,35 +120,38 @@
     transition: all 0.4s ease-out 0.1s;
   }
 
-  .drawer-menu.open .drawer-header {
+  nav.drawer-nav > div.drawer-menu.open > div.drawer-header {
     opacity: 1;
     transform: translateY(0);
   }
 
-  .drawer-logo {
+  /* Drawer Logo */
+  nav.drawer-nav > div.drawer-menu > div.drawer-header > div.drawer-logo {
     display: flex;
     align-items: center;
     gap: 0.75rem;
   }
 
-  .drawer-header .logo {
+  nav.drawer-nav
+    > div.drawer-menu
+    > div.drawer-header
+    > div.drawer-logo
+    > img.logo {
     max-height: 30px;
     width: auto;
     filter: brightness(1.1);
     transition: transform 0.3s ease;
   }
 
-  .drawer-logo:hover .logo {
+  nav.drawer-nav
+    > div.drawer-menu
+    > div.drawer-header
+    > div.drawer-logo:hover
+    > img.logo {
     transform: scale(1.05);
   }
 
-  .drawer-logo .logo {
-    opacity: 0;
-    transform: scale(0.8) rotate(-10deg);
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s;
-  }
-
-  .drawer-logo h3 {
+  nav.drawer-nav > div.drawer-menu > div.drawer-header > div.drawer-logo > h3 {
     color: #00ffcc;
     background: linear-gradient(135deg, #00ffcc, #7873f5);
     background-clip: text;
@@ -117,28 +162,41 @@
     margin: 0;
     font-family: inherit;
     letter-spacing: -0.02em;
-    transition: all 0.3s ease;
     opacity: 0;
     transform: translateX(-20px);
     transition: all 0.4s ease-out 0.3s;
   }
 
-  .drawer-menu.open .drawer-logo .logo {
+  nav.drawer-nav
+    > div.drawer-menu.open
+    > div.drawer-header
+    > div.drawer-logo
+    > img.logo {
     opacity: 1;
     transform: scale(1) rotate(0deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s;
   }
 
-  .drawer-menu.open .drawer-logo h3 {
+  nav.drawer-nav
+    > div.drawer-menu.open
+    > div.drawer-header
+    > div.drawer-logo
+    > h3 {
     opacity: 1;
     transform: translateX(0);
   }
 
-  .drawer-logo:hover h3 {
+  nav.drawer-nav
+    > div.drawer-menu
+    > div.drawer-header
+    > div.drawer-logo:hover
+    > h3 {
     transform: translateX(2px);
     filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.3));
   }
 
-  .drawer-close {
+  /* Drawer Close Button */
+  nav.drawer-nav > div.drawer-menu > div.drawer-header > button.drawer-close {
     font-size: 1.8rem;
     background: none;
     border: none;
@@ -154,13 +212,16 @@
     height: 36px;
   }
 
-  .drawer-close:hover {
+  nav.drawer-nav
+    > div.drawer-menu
+    > div.drawer-header
+    > button.drawer-close:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: rotate(90deg);
   }
 
   /* Section Headers */
-  .drawer-menu h4 {
+  nav.drawer-nav > div.drawer-menu > h4 {
     color: #00ffcc;
     margin: 1.5rem 0 1rem;
     font-size: 0.9rem;
@@ -451,9 +512,71 @@
 
 /* Ensure drawer doesn't show on larger screens */
 @media (min-width: 989px) {
+  .drawer-nav,
   .drawer-toggle,
   .drawer-menu,
   .drawer-overlay {
     display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Additional safety rule to ensure drawer is completely hidden on desktop */
+  .drawer-nav * {
+    display: none !important;
+  }
+
+  .drawer-nav {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
   }
 }
+
+/* ================================= */
+/* DRAWER NAVIGATION CONTAINER       */
+/* ================================= */
+
+/* Hide drawer navigation by default on all screens using specific selectors */
+nav.drawer-nav {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}
+
+nav.drawer-nav > .drawer-menu {
+  display: none !important;
+}
+
+nav.drawer-nav > .drawer-overlay {
+  display: none !important;
+}
+
+/* Only show drawer navigation on mobile/tablet screens with specific selectors */
+@media (max-width: 988px) {
+  nav.drawer-nav {
+    all: unset;
+  }
+  nav.drawer-nav {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  nav.drawer-nav > .drawer-menu {
+    display: flex !important;
+  }
+
+  nav.drawer-nav > .drawer-overlay {
+    display: block !important;
+  }
+}
+
+/* ================================= */
